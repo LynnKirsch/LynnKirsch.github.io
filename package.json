@@ -1,0 +1,39 @@
+{
+  "name": "tinymods",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "test": "npm run build && node --experimental-strip-types --test tests/*.test.mjs",
+    "lint": "eslint . --ignore-pattern .next --ignore-pattern out"
+  },
+  "dependencies": {
+    "@discourse/heic": "^1.0.0",
+    "@jsquash/avif": "^2.1.1",
+    "@jsquash/oxipng": "2.3.0",
+    "heic2any": "^0.0.4",
+    "imagetracerjs": "^1.2.6",
+    "motion": "^13.2.0",
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "ssim.js": "^3.5.0",
+    "vtracer-webapp": "^0.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3"
+  },
+  "type": "module",
+  "displayName": "Умный оптимизатор изображений"
+}
