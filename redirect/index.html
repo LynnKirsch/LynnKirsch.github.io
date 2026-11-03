@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <link rel="canonical" href="https://tinymods.ru/">
+  <meta http-equiv="refresh" content="0;url=https://tinymods.ru/">
+  <title>Tinymods — переадресация на основной сайт</title>
+  <script>
+    (() => {
+      const destination = new URL("https://tinymods.ru/");
+      let pathname = window.location.pathname;
+      // The old GitHub project address used /tinymods; the domain uses /.
+      pathname = pathname.replace(/^\/tinymods(?=\/|$)/i, "") || "/";
+      destination.pathname = pathname;
+      destination.search = window.location.search;
+      destination.hash = window.location.hash;
+      window.location.replace(destination.href);
+    })();
+  </script>
+</head>
+<body>
+  <p>Сайт переехал: <a href="https://tinymods.ru/">перейти на tinymods.ru</a>.</p>
+</body>
+</html>
